@@ -1,3 +1,5 @@
 User is highly proficient in defining multi-source, scheduled, time-of-day dependent automation flows involving connecting several major external services (Google Calendar, Gmail, iMessage/WhatsApp). When proposing solutions for such systems, the user requires an extremely high level of detail, methodical breakdown, and procedural verification before proceeding. Treat complex scheduling tasks as a priority requiring highly structured skills creation and testing.
 §
 User prefers that once an architectural plan is approved, the agent proceeds to implement the entire system ('build the whole thing') rather than just individual components.
+§
+User contact number for iMessage/SMS: 8432503805

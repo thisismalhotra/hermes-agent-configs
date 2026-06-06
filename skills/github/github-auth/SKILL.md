@@ -245,3 +245,4 @@ fi
 | Credentials not persisting | Check `git config --global credential.helper` — must be `store` or `cache` |
 | Multiple GitHub accounts | Use SSH with different keys per host alias in `~/.ssh/config`, or per-repo credential URLs |
 | `gh: command not found` + no sudo | Use git-only Method 1 above — no installation needed |
+| **Cron Job Push Failure** (fatal: could not read Username) | **The environment is non-interactive. Use SSH keys OR configure macOS keychain helper via `git config --global credential.helper osxkeychain`.** |
