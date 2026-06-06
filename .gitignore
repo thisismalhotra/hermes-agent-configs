@@ -1,0 +1,15 @@
+# Sensitive files
+*.env
+*.key
+*.pem
+*.crt
+*.p12
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# OS-specific files
+.DS_Store
+Thumbs.db
