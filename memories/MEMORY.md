@@ -1,0 +1,1 @@
+User utilizes PayPal and Xoom for processing payments and tracking transaction confirmations.

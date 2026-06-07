@@ -1,0 +1,19 @@
+[accounts.personal]
+email = "your-email@example.com"
+display-name = "Your Name"
+default = true
+
+backend.type = "imap"
+backend.host = "imap.gmail.com"
+backend.port = 993
+backend.encryption.type = "tls"
+backend.login = "your-email@example.com"
+backend.auth.type = "password"
+# Use a command that retrieves the app password securely (e.g., 'pass show email/imap' or 'secret')
+backend.auth.cmd = "echo 'your-16-character-app-password'"
+
+[accounts.personal.folder.aliases]
+inbox = "INBOX"
+sent = "Sent"
+drafts = "Drafts"
+trash = "Trash"
