@@ -103,6 +103,19 @@
     "use_count": 4,
     "view_count": 3
   },
+  "messenger-hub": {
+    "archived_at": null,
+    "created_at": "2026-06-09T08:00:27.464114+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-09T08:00:27.465071+00:00",
+    "last_viewed_at": "2026-06-09T08:00:27.464126+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "plan": {
     "archived_at": null,
     "created_at": "2026-06-06T20:51:28.354941+00:00",
