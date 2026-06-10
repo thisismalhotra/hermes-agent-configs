@@ -108,13 +108,13 @@
     "created_at": "2026-06-09T08:00:27.464114+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-09T08:00:27.465071+00:00",
-    "last_viewed_at": "2026-06-09T08:00:27.464126+00:00",
+    "last_used_at": "2026-06-10T08:00:18.639762+00:00",
+    "last_viewed_at": "2026-06-10T08:00:18.638578+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "plan": {
     "archived_at": null,
