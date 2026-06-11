@@ -43,13 +43,13 @@
     "created_at": "2026-06-06T04:03:31.706071+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-06T20:14:16.882195+00:00",
-    "last_used_at": "2026-06-09T11:00:41.247467+00:00",
-    "last_viewed_at": "2026-06-09T09:19:16.635710+00:00",
+    "last_used_at": "2026-06-10T11:00:36.974637+00:00",
+    "last_viewed_at": "2026-06-10T11:00:36.974321+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 17,
-    "view_count": 12
+    "use_count": 19,
+    "view_count": 13
   },
   "hermes-agent": {
     "archived_at": null,
@@ -69,13 +69,13 @@
     "created_at": "2026-06-07T01:24:51.893121+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-07T01:42:20.421901+00:00",
-    "last_used_at": "2026-06-07T03:44:03.928053+00:00",
-    "last_viewed_at": "2026-06-07T03:44:03.927374+00:00",
+    "last_used_at": "2026-06-11T02:15:19.873905+00:00",
+    "last_viewed_at": "2026-06-11T02:15:19.873575+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 4,
-    "view_count": 4
+    "use_count": 5,
+    "view_count": 5
   },
   "imessage": {
     "archived_at": null,
@@ -108,13 +108,13 @@
     "created_at": "2026-06-09T08:00:27.464114+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-10T08:00:18.639762+00:00",
-    "last_viewed_at": "2026-06-10T08:00:18.638578+00:00",
+    "last_used_at": "2026-06-10T08:30:22.005817+00:00",
+    "last_viewed_at": "2026-06-10T08:30:22.004931+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 3,
+    "view_count": 3
   },
   "plan": {
     "archived_at": null,
