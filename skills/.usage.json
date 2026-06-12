@@ -4,13 +4,13 @@
     "created_at": "2026-06-06T19:36:11.692663+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-06-06T19:36:22.374881+00:00",
-    "last_used_at": "2026-06-06T21:57:28.585015+00:00",
-    "last_viewed_at": "2026-06-06T21:57:28.583294+00:00",
+    "last_used_at": "2026-06-12T02:59:00.701182+00:00",
+    "last_viewed_at": "2026-06-12T02:59:00.700813+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "codex": {
     "archived_at": null,
@@ -43,12 +43,12 @@
     "created_at": "2026-06-06T04:03:31.706071+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-06T20:14:16.882195+00:00",
-    "last_used_at": "2026-06-10T11:00:36.974637+00:00",
+    "last_used_at": "2026-06-11T11:00:49.739664+00:00",
     "last_viewed_at": "2026-06-10T11:00:36.974321+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 19,
+    "use_count": 20,
     "view_count": 13
   },
   "hermes-agent": {
@@ -56,13 +56,13 @@
     "created_at": "2026-06-06T14:44:04.837083+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-09T00:15:28.058383+00:00",
-    "last_viewed_at": "2026-06-09T00:15:28.057620+00:00",
+    "last_used_at": "2026-06-12T02:50:15.576277+00:00",
+    "last_viewed_at": "2026-06-12T02:50:15.575828+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 6,
-    "view_count": 6
+    "use_count": 7,
+    "view_count": 7
   },
   "himalaya": {
     "archived_at": null,
@@ -108,13 +108,13 @@
     "created_at": "2026-06-09T08:00:27.464114+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-11T08:00:34.559068+00:00",
-    "last_viewed_at": "2026-06-11T08:00:34.558219+00:00",
+    "last_used_at": "2026-06-11T08:30:39.255848+00:00",
+    "last_viewed_at": "2026-06-11T08:30:39.254912+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 4,
-    "view_count": 4
+    "use_count": 5,
+    "view_count": 5
   },
   "plan": {
     "archived_at": null,
