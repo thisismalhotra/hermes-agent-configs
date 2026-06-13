@@ -28,7 +28,6 @@ import shutil
 import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
-from typing import Optional
 from email.mime.text import MIMEText
 from pathlib import Path
 
@@ -80,7 +79,7 @@ def _stored_token_scopes() -> list[str]:
     return list(SCOPES)
 
 
-def _gws_binary():
+def _gws_binary() -> str | None:
     override = os.getenv("HERMES_GWS_BIN")
     if override:
         return override
@@ -93,7 +92,7 @@ def _gws_env() -> dict[str, str]:
     return env
 
 
-def _run_gws(parts: list[str], *, params: Optional[dict] = None, body: Optional[dict] = None):
+def _run_gws(parts: list[str], *, params: dict | None = None, body: dict | None = None):
     binary = _gws_binary()
     if not binary:
         raise RuntimeError("gws not installed")
