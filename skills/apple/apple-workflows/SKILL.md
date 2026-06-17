@@ -20,6 +20,7 @@ Archived predecessor packages remain recoverable: `apple-notes`, `apple-reminder
 ## When to Use
 - The user asks to create/search/edit Apple Notes.
 - The user asks to add/list/complete Apple Reminders.
+- The user asks to create, verify, or troubleshoot Apple Calendar events.
 - The user asks to send or inspect iMessage/SMS conversations.
 - The user asks to locate Apple devices or AirTags via Find My.
 - The user asks to drive a macOS application in the background.
@@ -39,6 +40,21 @@ Archived predecessor packages remain recoverable: `apple-notes`, `apple-reminder
 - Use `remindctl` for reminder CRUD when available.
 - Capture list name, due date/time, recurrence, priority, and notes when the user provides them.
 - Verify by listing the target reminder/list after creation or completion.
+
+## Calendar
+- For Apple Calendar event writes, see `references/calendar-event-creation.md`.
+- Prefer EventKit through a small signed helper `.app` with `NSCalendarsUsageDescription` and `NSCalendarsFullAccessUsageDescription`; bare AppleScript/Swift can hang behind privacy prompts.
+- Always search for an existing matching event before creating a new one.
+- If Calendar permission cannot be granted promptly, produce a valid `.ics` fallback (`MEDIA:/...`) and clearly say that direct insertion was not verified.
+- Verify by reading back the created event title, start/end, calendar, and location whenever direct access succeeds.
+
+## Messages
+- Prefer native, verifiable creation with EventKit when adding Apple Calendar events. Build a tiny signed `.app` helper with `NSCalendarsUsageDescription` and `NSCalendarsFullAccessUsageDescription`, request access via `EKEventStore`, select a modifiable target calendar by exact name first, then substring match, and save the event.
+- Before saving, run a duplicate check over a narrow time window in the target calendar using title/location/date criteria.
+- For appointment texts, distinguish appointment time from arrival time. If the user says “arrive by 11:15” for an 11:30 appointment, set the event start to the arrival time and mention the appointment time in notes.
+- Include location, URL, notes, and sensible alarms when provided; avoid inventing missing details.
+- Verify by reading the saved EventKit result/log, including event identifier, title, start/end, and calendar. If access is denied or the permission prompt times out, do not claim success; provide an `.ics` fallback and state that direct calendar insertion was unverified.
+- Template: `templates/eventkit-calendar-helper.swift` contains a reusable Swift EventKit helper pattern for creating events and logging verification.
 
 ## Messages
 - Use the configured iMessage/SMS CLI (`imsg`) for sending and receiving.

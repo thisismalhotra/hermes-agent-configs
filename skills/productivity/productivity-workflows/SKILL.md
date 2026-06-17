@@ -33,6 +33,7 @@ Archived predecessor packages remain recoverable with their support files intact
 
 ## Google Workspace
 - Use the configured `gws` CLI or bridge scripts for Gmail, Calendar, Drive, Docs, and Sheets.
+- For Google Calendar event writes with `gws`, see `references/google-calendar-gws.md`: check `gws auth status` first, re-auth with the narrow calendar scope when tokens are expired/revoked, list calendars to identify the exact writable Family calendar, insert the event, then read it back by ID/link.
 - For Gmail search, use exact query syntax and verify message IDs before acting.
 - For scheduled Gmail summaries over the last 24 hours, see `references/gmail-last24-summary.md`: use `messages.list` with `q: newer_than:1d`, fetch metadata for Subject/From/Date, parse possible non-JSON status prefixes defensively, and report any auth failure rather than fabricating results. If read-only IMAP is configured through Himalaya, it can be used as a clearly-labeled fallback for reporting.
 
