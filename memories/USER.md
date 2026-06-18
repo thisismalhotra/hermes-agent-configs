@@ -8,4 +8,6 @@ Successfully sent iMessage/SMS using the 'imsg send --to [number] --text "[messa
 §
 User is planning a trip to Tulum (likely near Cancun) and stay at Royalton Riviera Cancun.
 §
-User is planning or has a special interest in a trip to Tulum and staying at the Royalton Riviera Cancun.
+User owns a Breville Barista Touch Impress espresso machine purchased around 2024 and is interested in value-for-money espresso machine upgrade paths and high-end home espresso options.
+§
+User was born July 14, 1981 in Karnal, Haryana, India; birth time is known only as morning.
