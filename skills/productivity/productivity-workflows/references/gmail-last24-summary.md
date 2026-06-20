@@ -21,8 +21,8 @@ Use this pattern for scheduled email-summary jobs that need Gmail/Google Workspa
 
 ## Robust parsing notes
 
-- `gws` may print non-JSON status text before the JSON payload (for example keyring status). In scripts, locate the first `{` or `[` and parse a single JSON object with `json.JSONDecoder().raw_decode(...)` instead of assuming the entire stdout is JSON.
-- If `gws` returns an auth error, report the auth problem directly and do not invent a Google Workspace result.
+- `gws` and IMAP fallbacks may print non-JSON status/warning text before the JSON payload (for example keyring status or IMAP codec warnings). Do **not** blindly parse from the first `{` or `[` because warning text can contain bracket characters too. In scripts, scan candidate `{`/`[` positions and use `json.JSONDecoder().raw_decode(...)` on each until one succeeds; then parse only that payload instead of assuming the entire stdout is JSON.
+- If `gws` returns an auth error, report the auth problem directly and do not invent a Google Workspace result. Use Himalaya only as a clearly-labeled read-only fallback when configured.
 
 ## Safe fallback when Gmail API auth is unavailable
 
@@ -40,8 +40,8 @@ Himalaya envelope IDs are folder-relative. Re-list if later actions need a messa
 
 ## Suggested categories
 
-- **Action Required**: unread messages or messages whose subject/from/snippet contain `action`, `urgent`, or `request`.
+- **Action Required**: unread messages or messages whose subject/from/snippet contain `action`, `urgent`, or `request`. If the user explicitly says unread belongs here, obey it even when a message also looks promotional; mention this rule briefly if the category appears noisy.
 - **Notifications**: automated alerts, newsletters, receipts, statements, GitHub/CI alerts, no-reply/notification senders, or operational status messages.
-- **To Delete/Ignore**: marketing, promotions, coupons, sales, feedback requests, and obvious junk.
+- **To Delete/Ignore**: marketing, promotions, coupons, sales, feedback requests, and obvious junk. For cleaner user-facing output, put read marketing here; unread marketing may remain Action Required under the explicit unread rule unless the user asks for semantic-only classification.
 
 For scheduled delivery, include a short source note if a fallback was used, then list only subject and sender under each category unless the user requested more detail.

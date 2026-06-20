@@ -1,0 +1,212 @@
+{
+  "jobs": [
+    {
+      "id": "ad2b9b542d71",
+      "name": "Daily Gmail Briefing (7AM)",
+      "prompt": "Run a Python script to fetch all emails from the last 24 hours using the google-workspace skill. Categorize them into three groups: \n1. 'Action Required' (unread or containing keywords like action, urgent, request).\n2. 'Notifications' (automated alerts/newsletters).\n3. 'To Delete/Ignore' (marketing/promotions/junk).\n\nFormat the output as a clean summary with headers for each category and list the subject and sender for each email. Deliver the results to the user.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "display": "0 7 * * *"
+      },
+      "schedule_display": "0 7 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 14
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-06T16:12:46.453092-04:00",
+      "next_run_at": "2026-06-20T07:00:00-04:00",
+      "last_run_at": "2026-06-18T07:02:56.873769-04:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": null,
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "skills"
+      ],
+      "workdir": "/Users/gauravmalhotra",
+      "profile": null
+    },
+    {
+      "id": "d3fdf52cd809",
+      "name": "Hermes Config Backup",
+      "prompt": "Execute the synchronization script /Users/gauravmalhotra/herms-sync-backup.sh and provide a brief summary of whether the backup was successful or if any errors occurred during the process.",
+      "skills": [
+        "terminal"
+      ],
+      "skill": "terminal",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "display": "0 3 * * *"
+      },
+      "schedule_display": "0 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 15
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-06T16:30:08.164057-04:00",
+      "next_run_at": "2026-06-20T03:00:00-04:00",
+      "last_run_at": "2026-06-18T03:00:31.373174-04:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "c4b2204a6535",
+      "name": "Hermes Backup Watchdog",
+      "prompt": "Execute the Python script /Users/gauravmalhotra/hermes-sentinel/scripts/backup_monitor.py to verify your backup integrity and notify me via messenger-hub if it fails.",
+      "skills": [
+        "terminal"
+      ],
+      "skill": "terminal",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 12
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-06T16:53:04.962085-04:00",
+      "next_run_at": "2026-06-20T04:00:00-04:00",
+      "last_run_at": "2026-06-18T04:02:02.865317-04:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "339275622171",
+      "name": "Hermes Audit Log Sentinel",
+      "prompt": "Run the Python script /Users/gauravmalhotra/hermes-sentinel/scripts/log_monitor.py to scan your system audit log for any errors or failures and trigger a messenger-hub alert if anything is found.",
+      "skills": [
+        "terminal"
+      ],
+      "skill": "terminal",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 4 * * *",
+        "display": "30 4 * * *"
+      },
+      "schedule_display": "30 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 12
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-06T16:53:09.046727-04:00",
+      "next_run_at": "2026-06-20T04:30:00-04:00",
+      "last_run_at": "2026-06-18T04:30:36.818225-04:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "2c0e30d10eba",
+      "name": "Daily AI Workflow Velocity Radar",
+      "prompt": "Every day at 5:00 AM local time, scan public sources for AI workflows gaining velocity in the last 24 hours and deliver a concise ranked list of five content angles to the origin Telegram chat.\n\nGoal: Help us stay on top of the hottest workflows people are building/cooking with AI.\n\nSources to scan:\n1. Reddit: especially r/LocalLLaMA, r/ChatGPT, r/OpenAI, r/ClaudeAI, r/ArtificialInteligence, r/AI_Agents, r/n8n, r/SideProject, r/SaaS, r/Entrepreneur, r/automation.\n2. X/Twitter: search public posts and trends around AI workflows, agents, automation, Claude Code, Cursor, Codex, Gemini, n8n, Zapier, MCP, RAG, voice agents, AI coding, AI video, browser agents, personal ops, sales/marketing ops, and agentic workflows.\n3. AI forums/communities and adjacent sources: Hacker News, Product Hunt, Indie Hackers, Hugging Face forums/spaces, OpenAI/Anthropic/Google AI forums or changelogs, LangChain/LlamaIndex/n8n communities, GitHub trending repos, relevant AI blogs/newsletters when useful.\n\nMethod:\n- Use web search and, when available, X search. Prioritize evidence from the last 24 hours.\n- Look for velocity signals, not just isolated popularity: repeated mentions across communities, fast-growing repos/tools, many comments/upvotes/reposts, new tutorials/templates, people sharing builds, demos, or pain points, and convergence around a workflow pattern.\n- Cluster similar posts into workflow themes. Prefer practical workflows people can actually implement over generic model-release news.\n- Rank by a combined judgment of recency, cross-source frequency, engagement, novelty, practicality, and content potential.\n- Include links or source names for evidence. If exact engagement metrics are unavailable, say so and use qualitative evidence.\n\nOutput format:\n## Daily AI Workflow Velocity Radar \u2014 {date}\n\nOne-sentence summary of what is heating up overall.\n\nThen exactly five ranked items:\n1. **Content angle:** <punchy title>\n   - **Workflow gaining velocity:** <what people are doing>\n   - **Why it\u2019s heating up:** <evidence/signals from the last 24h>\n   - **Audience:** <who cares>\n   - **Content take:** <specific video/thread/blog angle we could publish>\n   - **Evidence:** <2-4 concise source links or source names>\n\nEnd with:\n**Watch next:** 2-3 emerging weak signals that are not top-five yet.\n\nKeep the whole report concise but useful. Do not ask questions; if a source is inaccessible, proceed with the remaining public sources and mention the limitation briefly.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 5 * * *",
+        "display": "0 5 * * *"
+      },
+      "schedule_display": "0 5 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 7
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-11T22:59:19.712965-04:00",
+      "next_run_at": "2026-06-20T05:00:00-04:00",
+      "last_run_at": "2026-06-18T05:00:56.966575-04:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8870911888",
+        "chat_name": "Gaurav Malhotra",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "x_search"
+      ],
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-06-19T21:08:07.209174-04:00"
+}

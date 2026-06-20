@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/Users/gauravmalhotra/.hermes/logs/curator/20260613-035935",
-  "last_run_at": "2026-06-13T03:59:35.502314+00:00",
-  "last_run_duration_seconds": 553.442921,
-  "last_run_summary": "auto: no changes; llm: Consolidation pass completed.\n\nCreated 9 class-level umbrella skills and archived/consolidated the obvious prefix/domain clusters:\n\n- `apple-workflows` for Apple/macOS Notes, Reminders, Messages, Find My, and computer-use workflows.\n- `auto…\narchived 63 skill(s):\n  • airtable — pruned (stale)\n  • apple-notes — pruned (stale)\n  • apple-reminders — pruned (stale)\n  • architecture-diagram — pruned (stale)\n  • arxiv — pruned (stale)\n  • ascii-art — pruned (stale)\n  • ascii-video — pruned (stale)\n  • audiocraft-audio-generation — pruned (stale)\n  • automation-orchestration — pruned (stale)\n  • baoyu-infographic — pruned (stale)\n  … and 53 more\nfull report: hermes curator status",
+  "last_report_path": "/Users/gauravmalhotra/.hermes/logs/curator/20260620-040948",
+  "last_run_at": "2026-06-20T04:09:48.425523+00:00",
+  "last_run_duration_seconds": 0.294211,
+  "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": "2026-06-13T03:59:35.502314+00:00",
   "paused": false,
-  "run_count": 1
+  "run_count": 2
 }
