@@ -32,6 +32,13 @@ Archived predecessor packages remain recoverable: `node-inspect-debugger`, `pyth
 4. Make minimal, focused changes.
 5. Run real verification commands and report actual output.
 
+## Hermes Agent Behavior/Config Changes
+- When changing Hermes Agent defaults, prefer model/provider-scoped behavior over broad global defaults unless the global safety tradeoff is explicit.
+- For gateway-visible behavior, verify both CLI/TUI output and gateway replay/status paths; an informational notice that is acceptable in CLI can become repeated noise in Telegram/iMessage.
+- Preserve user opt-outs when converting an old explicit warning/auto-raise path into a silent default.
+- For model-aware compression/default work, see `references/hermes-model-aware-compression.md`.
+- For native Electron/Desktop app liveness vs stale window-state debugging, see `references/native-electron-desktop-liveness.md`.
+
 ## Systematic Debugging
 - Follow understand → reproduce → isolate → fix → verify.
 - Avoid speculative fixes before a confirmed failure mode.

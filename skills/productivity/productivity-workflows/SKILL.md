@@ -36,6 +36,7 @@ Archived predecessor packages remain recoverable with their support files intact
 - For Google Calendar event writes with `gws`, see `references/google-calendar-gws.md`: check `gws auth status` first, re-auth with the narrow calendar scope when tokens are expired/revoked, list calendars to identify the exact writable Family calendar, insert the event, then read it back by ID/link.
 - For Gmail search, use exact query syntax and verify message IDs before acting.
 - For scheduled Gmail summaries over the last 24 hours, see `references/gmail-last24-summary.md`: use `messages.list` with `q: newer_than:1d`, fetch metadata for Subject/From/Date, parse possible non-JSON status prefixes defensively, and report any auth failure rather than fabricating results. If read-only IMAP is configured through Himalaya, it can be used as a clearly-labeled fallback for reporting.
+- When Google Workspace auth is unavailable but the user only needs to read/search Gmail, use `references/gmail-readonly-himalaya-fallback.md`: verify `himalaya account list`, place options before the quoted query, search likely sender/subject/body terms, then read exact message IDs.
 
 ## Airtable and Notion
 - Confirm base/database/table/page IDs and schemas before writes.

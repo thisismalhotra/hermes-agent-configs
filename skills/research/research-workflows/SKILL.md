@@ -44,6 +44,10 @@ Archived predecessor packages remain recoverable with references/scripts intact:
 - For Polymarket, distinguish market metadata, current prices, order books, and historical data.
 - Include retrieval time because markets move.
 
+## Public Company / Stock Snapshots
+- For quick stock-portfolio questions, use `references/public-company-stock-snapshot.md`.
+- Confirm ambiguous company names/tickers, retrieve current or recent quote data, ground fundamentals in primary filings when possible, and frame the answer by portfolio role, valuation, risks, and sizing rather than a simplistic buy/sell call.
+
 ## Common Pitfalls
 1. Treating search result snippets as sources.
 2. Mixing outdated and current market data without timestamps.

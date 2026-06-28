@@ -40,12 +40,20 @@ Archived predecessor skills remain recoverable as complete packages if deep comm
 ## Repository Management
 - For repo creation/forking, confirm owner/name/visibility before side effects.
 - Preserve remotes intentionally: `origin` for the write target, `upstream` for canonical source.
+- For existing customer/domain repos that should behave as downstreams of an upstream base without recreating GitHub fork lineage, prefer an enforceable fork-guard contract: `upstream` remote + narrow `.fork-allowlist` + `.fork-baseline` + `scripts/check-fork-divergence.sh` + CI workflow. See `references/downstream-fork-governance.md`.
 - For releases, verify tags locally and remotely before creating a release.
 
 ## Issues
 - Gather title, body, labels, assignees, milestone, and reproduction evidence.
 - Use templates when available; otherwise include expected behavior, actual behavior, steps, environment, and evidence.
 - After creation, return the issue URL/number from `gh issue view --json url,number`.
+
+## GitHub Projects v2 Roadmap/Epic Work
+- For roadmap epics, inspect existing `[Epic]` conventions, labels, and the target Project v2 fields before creating new items.
+- Create the GitHub issue first, add it to the Project v2 board, then populate board fields (`Status`, `Area`, `Priority`, `Sprint or Iteration`, `Size`, text/date fields) using Project item IDs and field option IDs.
+- Use GraphQL to discover iteration IDs; `gh project field-list` may show fields/options but not enough iteration detail for reliable sprint assignment.
+- Verify both the issue (`gh issue view`) and Project item field values before reporting success.
+- See `references/github-projects-v2-roadmap-epics.md` for a command-level Projects v2 epic creation pattern.
 
 ## Pull Requests and CI
 - Create a topic branch, make focused commits, and open PRs with explicit test evidence.

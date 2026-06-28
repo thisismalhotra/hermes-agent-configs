@@ -48,7 +48,7 @@ Archived predecessor packages remain recoverable: `apple-notes`, `apple-reminder
 - If Calendar permission cannot be granted promptly, produce a valid `.ics` fallback (`MEDIA:/...`) and clearly say that direct insertion was not verified.
 - Verify by reading back the created event title, start/end, calendar, and location whenever direct access succeeds.
 
-## Messages
+## Calendar Event Creation Notes
 - Prefer native, verifiable creation with EventKit when adding Apple Calendar events. Build a tiny signed `.app` helper with `NSCalendarsUsageDescription` and `NSCalendarsFullAccessUsageDescription`, request access via `EKEventStore`, select a modifiable target calendar by exact name first, then substring match, and save the event.
 - Before saving, run a duplicate check over a narrow time window in the target calendar using title/location/date criteria.
 - For appointment texts, distinguish appointment time from arrival time. If the user says “arrive by 11:15” for an 11:30 appointment, set the event start to the arrival time and mention the appointment time in notes.
@@ -56,10 +56,13 @@ Archived predecessor packages remain recoverable: `apple-notes`, `apple-reminder
 - Verify by reading the saved EventKit result/log, including event identifier, title, start/end, and calendar. If access is denied or the permission prompt times out, do not claim success; provide an `.ics` fallback and state that direct calendar insertion was unverified.
 - Template: `templates/eventkit-calendar-helper.swift` contains a reusable Swift EventKit helper pattern for creating events and logging verification.
 
-## Messages
-- Use the configured iMessage/SMS CLI (`imsg`) for sending and receiving.
-- Resolve recipient ambiguity before sending. Never invent phone numbers or contacts.
+## Messages / iMessage
+- First distinguish the user's goal:
+  - **Local Mac send/read control**: use the configured iMessage/SMS CLI (`imsg`) for sending, receiving, and history from the Mac's native Messages.app. This requires Messages.app signed into Apple ID; basic `imsg` features do not require the Hermes gateway.
+  - **Text Hermes as a bot from iMessage**: configure a Hermes messaging gateway channel, usually Photon iMessage or BlueBubbles, not merely `imsg`.
+- For local `imsg` operations, resolve recipient ambiguity before sending. Never invent phone numbers or contacts.
 - After sending, verify CLI success/status and report the recipient/channel.
+- For Hermes-as-iMessage-bot setup, see `references/imessage-hermes-gateway.md` for the Photon vs BlueBubbles decision guide, setup checklist, plugin-enable/restart verification, and the `Target not allowed for this project` inbound-first/pairing pitfall.
 
 ## Find My
 - Use FindMy.app/CLI workflows only for the user's devices/items.
