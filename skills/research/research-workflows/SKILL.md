@@ -48,11 +48,20 @@ Archived predecessor packages remain recoverable with references/scripts intact:
 - For quick stock-portfolio questions, use `references/public-company-stock-snapshot.md`.
 - Confirm ambiguous company names/tickers, retrieve current or recent quote data, ground fundamentals in primary filings when possible, and frame the answer by portfolio role, valuation, risks, and sizing rather than a simplistic buy/sell call.
 
+## E-commerce / Product Variant Checks
+When asked whether a pictured product is available in other colors, sizes, regions, or variants:
+1. Identify the exact product and model from the screenshot/photo first (OCR visible title/model; use vision if needed).
+2. Verify the exact model on the manufacturer/brand page before relying on marketplace search results.
+3. Inspect variant selectors and product metadata for the exact model (e.g. Color, Style, Model). Treat related search results as separate products unless they share the same model/SKU.
+4. Cross-check a major retailer page when available, but distinguish exact-model listings from adjacent product lines that advertise “other colors/patterns.”
+5. Answer with the exact model, observed variant(s), source type(s) checked, and any caveat about related models.
+
 ## Common Pitfalls
 1. Treating search result snippets as sources.
 2. Mixing outdated and current market data without timestamps.
 3. Producing literature reviews without citations.
 4. Overwriting a knowledge base without preserving provenance.
+5. For product color/variant questions, conflating marketplace “other colors/patterns” for adjacent models with true variants of the exact model shown.
 
 ## Verification Checklist
 - [ ] Research question and scope stated.
@@ -60,3 +69,4 @@ Archived predecessor packages remain recoverable with references/scripts intact:
 - [ ] Citations/URLs/IDs included.
 - [ ] Uncertainty and timestamps included where relevant.
 - [ ] Generated files/datasets verified.
+- [ ] For product variant checks, exact model/SKU was verified against manufacturer or authoritative retailer data.

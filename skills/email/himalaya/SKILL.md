@@ -302,3 +302,17 @@ RUST_LOG=trace RUST_BACKTRACE=1 himalaya envelope list
 - Message IDs are relative to the current folder; re-list after folder changes.
 - For composing rich emails with attachments, use MML syntax (see `references/message-composition.md`).
 - Store passwords securely using `pass`, system keyring, or a command that outputs the password.
+
+## Recent-email reporting pattern
+
+For cron summaries of “last 24 hours” email when Gmail/Google Workspace OAuth is unavailable, use Himalaya as a reliable IMAP fallback:
+
+1. List candidate folders with JSON output: `himalaya folder list --output json`.
+2. Prefer Gmail’s aggregate folder for normal mail: `"[Gmail]/All Mail"`; also query spam/junk folders separately because Gmail excludes them from All Mail.
+3. Use a coarse date query and filter exact timestamps in Python, because Himalaya’s search grammar accepts dates (`after YYYY-MM-DD`) rather than precise datetimes:
+   ```bash
+   himalaya envelope list --folder "[Gmail]/All Mail" --page 1 --page-size 500 --output json after 2026-06-26 order by date desc
+   himalaya envelope list --folder "[Gmail]/Spam" --page 1 --page-size 500 --output json after 2026-06-26 order by date desc
+   ```
+4. Parse envelope fields `subject`, `from`, `date`, and `flags`; treat absent `Seen` / Gmail `UNREAD` labels as unread, but do not blindly put obvious spam/marketing into “Action Required” just because it is unread.
+5. Deduplicate across folders by `(subject, sender, date)`, since Gmail labels/folders can show the same message more than once.
