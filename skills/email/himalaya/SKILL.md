@@ -309,10 +309,10 @@ For cron summaries of “last 24 hours” email when Gmail/Google Workspace OAut
 
 1. List candidate folders with JSON output: `himalaya folder list --output json`.
 2. Prefer Gmail’s aggregate folder for normal mail: `"[Gmail]/All Mail"`; also query spam/junk folders separately because Gmail excludes them from All Mail.
-3. Use a coarse date query and filter exact timestamps in Python, because Himalaya’s search grammar accepts dates (`after YYYY-MM-DD`) rather than precise datetimes:
+3. Use a coarse date query and filter exact timestamps in Python, because Himalaya’s search grammar accepts dates (`after YYYY-MM-DD`) rather than precise datetimes. Some IMAP backends treat `after YYYY-MM-DD` as exclusive, so for a last-24-hours window query one calendar day earlier than the exact cutoff date, then apply the exact `now - 24h` timestamp in Python:
    ```bash
-   himalaya envelope list --folder "[Gmail]/All Mail" --page 1 --page-size 500 --output json after 2026-06-26 order by date desc
-   himalaya envelope list --folder "[Gmail]/Spam" --page 1 --page-size 500 --output json after 2026-06-26 order by date desc
+   himalaya envelope list --folder "[Gmail]/All Mail" --page 1 --page-size 500 --output json after 2026-06-25 order by date desc
+   himalaya envelope list --folder "[Gmail]/Spam" --page 1 --page-size 500 --output json after 2026-06-25 order by date desc
    ```
 4. Parse envelope fields `subject`, `from`, `date`, and `flags`; treat absent `Seen` / Gmail `UNREAD` labels as unread, but do not blindly put obvious spam/marketing into “Action Required” just because it is unread.
 5. Deduplicate across folders by `(subject, sender, date)`, since Gmail labels/folders can show the same message more than once.

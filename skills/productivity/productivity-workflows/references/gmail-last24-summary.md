@@ -36,7 +36,7 @@ Then paginate until either:
 - the page contains no messages within the last 24 hours, or
 - the page size is smaller than requested.
 
-Himalaya envelope IDs are folder-relative. Re-list if later actions need a message ID. For a report-only job, subject/from/date/flags from `envelope list` are usually enough.
+Himalaya envelope IDs are folder-relative. Re-list if later actions need a message ID. For a report-only job, subject/from/date/flags from `envelope list` are usually enough. Because Himalaya/IMAP date searches are day-granular and some backends treat `after YYYY-MM-DD` as exclusive, query one calendar day earlier than the exact 24-hour cutoff date and then filter precisely by timestamp in Python.
 
 ## Suggested categories
 
