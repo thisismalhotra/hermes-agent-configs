@@ -56,6 +56,24 @@ When asked whether a pictured product is available in other colors, sizes, regio
 4. Cross-check a major retailer page when available, but distinguish exact-model listings from adjacent product lines that advertise “other colors/patterns.”
 5. Answer with the exact model, observed variant(s), source type(s) checked, and any caveat about related models.
 
+## Local School Calendar / Date Checks
+When asked about school dates (first day, breaks, open house, staggered starts):
+1. Do not assume the school district from the user's metro area or prior nearby searches; verify the exact district/school from memory, the user's wording, or a direct clarification if necessary.
+2. Prefer the official district website and its PDF/calendar resource over search snippets or third-party calendars.
+3. For “this year,” check the live current date/year and choose the relevant school year before answering.
+4. If the district has exceptions (kindergarten staggered start, early college, modified year-round, school-specific calendars), include the exception only when relevant and label it clearly.
+5. Keep the answer short first, then offer to check a specific school if needed.
+6. See `references/school-calendar-date-checks.md` for source patterns and local examples.
+
+## Common Pitfalls
+When asked for a school start date, first day of school, open house, break date, or similar calendar fact:
+1. Infer the likely district/school from context only when obvious, but state the assumption in the final answer.
+2. Prefer the official district/school calendar page over general search results; if Google/search is blocked or noisy, navigate directly to the district site and use its site search/navigation.
+3. Expand accordion sections for the relevant academic year and inspect linked PDFs, not just the visible page text.
+4. For PDF calendars, use browser/vision/OCR when text extraction is unavailable; visually verify the date label on the calendar itself.
+5. Check whether special calendars exist for early colleges, middle colleges, magnet programs, or non-traditional schools, and mention exceptions briefly.
+6. Keep the user-facing answer short: lead with the date, then list any important exceptions and the source assumption.
+
 ## Common Pitfalls
 1. Treating search result snippets as sources.
 2. Mixing outdated and current market data without timestamps.

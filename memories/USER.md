@@ -6,7 +6,7 @@ User contact number for iMessage/SMS: 8432503805
 §
 Successfully sent iMessage/SMS using the 'imsg send --to [number] --text "[message]"' pattern. This system function is working and should be relied upon for future messaging tasks requiring macOS access. The process requires that the target number is valid and the `imsg` CLI is functional.
 §
-User is planning a trip to Tulum (likely near Cancun) and stay at Royalton Riviera Cancun.
+User’s kids attend Fort Mill School District schools in South Carolina.
 §
 User owns a Breville Barista Touch Impress espresso machine purchased around 2024 and is interested in value-for-money espresso machine upgrade paths and high-end home espresso options.
 §
